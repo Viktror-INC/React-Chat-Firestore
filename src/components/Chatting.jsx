@@ -1,8 +1,8 @@
 import React, {useContext} from 'react';
 import {Context} from "../index";
 import {useAuthState} from "react-firebase-hooks/auth";
-import {Avatar, Button, Container, Grid, TextField} from "@material-ui/core";
-import {useCollection, useCollectionData} from "react-firebase-hooks/firestore";
+import {Avatar, Button, Container, TextField} from "@material-ui/core";
+import {useCollectionData} from "react-firebase-hooks/firestore";
 import Loader from "./Loader";
 import firebase from 'firebase';
 

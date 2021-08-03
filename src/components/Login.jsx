@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Box, Button, Container, Grid} from "@material-ui/core";
+import {Box, Button, Container} from "@material-ui/core";
 import {Context} from "../index";
 import firebase from "firebase";
 

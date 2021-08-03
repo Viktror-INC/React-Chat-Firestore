@@ -10,6 +10,7 @@ import './index.css';
 function App() {
     const {auth} = useContext(Context);
     const [user,loading, error] = useAuthState(auth);
+    console.log(user, error)
     if (loading) {
         return <Loader/>
     }

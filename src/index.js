@@ -6,7 +6,6 @@ import firebase from "firebase";
 import 'firebase/firestore';
 import 'firebase/auth'
 
-var firebaseConfig =
 // Initialize Firebase
     firebase.initializeApp({
         apiKey: "AIzaSyC5oXD2EzDNVukRB4I4Z_ZXqm0dGNJoLkc",
