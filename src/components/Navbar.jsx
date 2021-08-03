@@ -9,15 +9,15 @@ const Navbar = () => {
     const {auth} = useContext(Context);
     const [user] = useAuthState(auth);
     return (
-        <AppBar color={"primary"} position="static">
-            <Toolbar variant={"dense"}>
-                <Grid container justify={"flex-end"}>
+        <AppBar style={{backgroundColor: "blue", justifyContent:"flex-end"}}>
+            <Toolbar style={{justifyContent:"flex-end"}}>
+                <div>
                     {user ?
-                        <Button onClick={() => auth.signOut()} variant={"outlined"}>Log out</Button>
+                        <Button style={{flexDirection:"flex-end", backgroundColor:"white !important", borderRadius: "5px"}} onClick={() => auth.signOut()}  >Log out</Button>
                         :
-                        <NavLink to={LOGIN_ROUTE}><Button variant={"outlined"}>Login</Button></NavLink>
+                        <NavLink to={LOGIN_ROUTE}><Button style={{flexDirection:"flex-end", backgroundColor:"#F0FFFF", borderRadius: "5px"}} >Login</Button></NavLink>
                     }
-                </Grid>
+                </div>
             </Toolbar>
         </AppBar>
     );

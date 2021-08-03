@@ -32,20 +32,20 @@ const Chatting = () => {
 
     return (
         <Container>
-            <Grid container
+            <div 
                   justify={"center"}
-                  style={{height: window.innerHeight - 100, marginTop: "50px",}}>
-                <div style={{width: '80%', height: '70vh', border: '1px solid gray', overflowY: 'auto', borderRadius: "5%",}}>
-                    {messages.map(message => {
+                  style={{height: window.innerHeight - 100,margin: "0 auto", marginTop: "100px",}}>
+                <div style={{width: '80%', height: '70vh', border: '1px solid gray', overflowY: 'auto', borderRadius: "5%", margin: "0 auto",}}>
+                    {messages.map((message, index) => {
                             return (
-                                <div style={{
+                                <div key={index} style={{
                                     marginTop: "20px",
                                     position: "relative",
                                     width: "100%",
                                     display: "flex",
                                     flexDirection: "column",
                                 }}>
-                                    <Grid container style={{
+                                    <div  style={{
                                         width: "100%",
                                         display: "flex",
                                         flexDirection: "column",
@@ -61,18 +61,18 @@ const Chatting = () => {
                                             padding: "0 2%",
                                             maxWidth:"fit-content",
                                         }}>{message.text}</div>
-                                    </Grid>
+                                    </div>
                                 </div>
                             )
                         }
                     )}
                 </div>
-                <Grid container direction={"column"} alignItems={"flex-end"} style={{width: '80%', marginTop: '20px', borderRadius: "5%",}}>
-                    <TextField fullWidth rowsMax={2} variant={"outlined"} value={value}
+                <div  style={{margin: "0 auto",alignItems: "flex-end", display: "flex",flexDirection: "column", width: '80%', marginTop: '20px', borderRadius: "5%",}}>
+                    <TextField  value={value} style ={{width:"100%", border:"2px solid black", borderRadius:"10px"}}
                                onChange={(e) => setValue(e.target.value)}/>
-                    <Button onClick={sentMessage} style={{marginTop: '20px', borderRadius: "5%",}} variant={"outlined"}>Send</Button>
-                </Grid>
-            </Grid>
+                    <Button onClick={sentMessage} style={{margin: "0 auto",marginTop: '20px', borderRadius: "5%",border:"2px solid black",}}  >Send</Button>
+                </div>
+            </div>
         </Container>
     );
 };

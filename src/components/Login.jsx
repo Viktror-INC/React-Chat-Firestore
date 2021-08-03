@@ -13,22 +13,13 @@ const Login = () => {
     }
     return (
         <Container>
-            <Grid container
-                  style={{height:window.innerHeight - 50}}
-                  alignItems={"center"}
-                  justify={"center"}
-            >
-            <Grid
-                style={{width:400, background: "lightgray"}}
-                container
-                alignItems={"center"}
-                direction={"column"}
-            >
+            <div  style={{height:window.innerHeight - 50, position: "relative", display:"flex", alignItems:"center", justifyContent: "center"}}>
+            <div style={{margin: "0 auto", position: "relative",width:400, background: "lightgray", alignItems:"center", textAlign: "center"}}>
                 <Box p={5}>
-                    <Button onClick={login} variant={"outlined"}>Log in with Google</Button>
+                    <Button onClick={login}>Log in with Google</Button>
                 </Box>
-            </Grid>
-            </Grid>
+            </div>
+            </div>
         </Container>
     );
 };
